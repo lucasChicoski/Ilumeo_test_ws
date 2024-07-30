@@ -8,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon src/app.ts",
     "seed": "ts-node prisma/seed.ts",
+    "start:prod": "node dist/src/main",
     "migration": "npx prisma migrate dev --name init   ",
     "teste": "prisma generate",
     "build": "tsc"
