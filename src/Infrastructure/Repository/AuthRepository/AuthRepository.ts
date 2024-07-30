@@ -10,7 +10,7 @@ export class AuthRepository implements IAuthRepository {
 
     async login(code_user: string): Promise<User> {
 
-        const result = await this.prismaDB.user.findUnique({ where: { code_user_id: code_user } })
+        const result = await this.prismaDB.user.findFirst({ where: { code_user_id: code_user } })
 
         return result as User
     }
